@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
     {
         return [
             //Desde este factory nosotros vamos a indicarle a Facade que queremos que nos descargue una imagen para una categoria
-            'image'=>'products/'.$this->faker->image('public/storage/products',640,480,null, false)//aca especificamos la direccion de donde queremos que se almacenen las imagenes y los parametros de alto, ancho,
+            'image'=>'categories/'.$this->faker->image('public/storage/categories',640,480,null, false)//aca especificamos la direccion de donde queremos que se almacenen las imagenes y los parametros de alto, ancho,
         ];
     }
 

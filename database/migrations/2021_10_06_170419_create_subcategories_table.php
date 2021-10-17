@@ -18,8 +18,8 @@ class CreateSubcategoriesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->boolean('color');
-            $table->boolean('size');
+            $table->boolean('color')->default(false);//cuando creemos un nuevo registro y no especifiquemos el color ni el size por defecto se coloca que no necesita de esos campos
+            $table->boolean('size')->default(false);
             //llave foranea de la tabla Category
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
