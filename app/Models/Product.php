@@ -27,9 +27,9 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    //relacion n:M
+    //relacion N:M
     public function colors(){
-        return $this->hasMany(Color::class);
+        return $this->belongsToMany(Color::class);
     }
 
     //relacion 1:N polimorfica

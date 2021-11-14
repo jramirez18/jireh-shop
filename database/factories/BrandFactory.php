@@ -1,5 +1,5 @@
 <?php
-
+//FACTORY PARA INTRODUCIR REGISTROS DE LAS MARCAS
 namespace Database\Factories;
 
 use App\Models\Brand;
@@ -22,7 +22,8 @@ class BrandFactory extends Factory
     public function definition()
     {
         return [
-            //
+            //le indicamos que el campo name lo complete con una palabra
+            'name'=>$this->faker->word()
         ];
     }
 }
